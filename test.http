@@ -1,0 +1,35 @@
+### GET request to example server
+GET localhost:8080/products
+
+###
+POST localhost:8080/products
+
+{"id":2,"name":"Banana","price":250}
+###
+DELETE localhost:8080/products/3
+###
+PUT localhost:8080/products/99
+
+{"id":1,"name":"Apple","price":250}
+###
+POST localhost:8080/login
+Content-Type: application/json
+
+{"username":"Banana","password": "qwerty"}
+###
+POST localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3ODA3NDYxNTcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiQmFuYW5hIn0.z7Z5woCRzIQzpTd2G2rgC4z0fVNJbfIEU7XrOMStBE8
+Content-Type: application/json
+
+{"product_id": 1}
+
+###
+GET localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3ODA3NDYxNTcsInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiQmFuYW5hIn0.z7Z5woCRzIQzpTd2G2rgC4z0fVNJbfIEU7XrOMStBE8
+
+###
+POST localhost:8080/checkout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3ODA3NTY4MzksInJvbGUiOiJhZG1pbiIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiQmFuYW5hIn0.tNwRbv3KUMzVU3v1A_1dl0vEPtdZO94yWWLoC13KZ-s
+Content-Type: application/json
+
+{"product_id": 1}
